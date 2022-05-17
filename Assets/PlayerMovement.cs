@@ -17,7 +17,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // transform.position += MovementSpeed;
-
-        transform.eulerAngles += movementSpeed;
+        if (transform.position.x < 10)
+        {
+            transform.position += movementSpeed;
+        }
+       
     }
 }
